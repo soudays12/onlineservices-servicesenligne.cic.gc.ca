@@ -270,16 +270,28 @@ a.link {
     text-align: right
 }
 
-.number-button{
+.number-button,.feedback-button{
     background-color: #0d4f7a;
     color: #ffffff;
     position: relative;
-    margin-left: auto;
+    
     padding: 7px 10px;
     border-radius: 3px;
     font-weight: 500;
     font-size: large;
     border: none;
+}
+.number-button{
+    background-color: #0d4f7a;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+}
+.feedback-button{
+    background-color: #d9d9d9;
+    color: #0d4f7a;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 /* responsive */
@@ -301,39 +313,37 @@ a.link {
 
 
 /*popup*/
-/* modal.css */
 
 /* Lien d'ouverture */
 #openModal {
-  color: #2563eb;               /* text-blue-600 */
+  color: #2563eb;             
   text-decoration: underline;
   cursor: pointer;
 }
 #openModal:hover {
-  color: #1e40af;               /* hover:text-blue-800 */
+  color: #1e40af;              
 }
 
 /* Overlay (fond sombre) */
 #modalOverlay {
   position: fixed;
-  inset: 0;                     /* top:0; right:0; bottom:0; left:0 */
-  display: none;                /* hidden par défaut */
+  inset: 0;                    
+  display: none;               
   align-items: center;
   justify-content: center;
-  background-color: rgba(0,0,0,0.4); /* bg-black bg-opacity-40 */
+  background-color: rgba(0,0,0,0.4); 
   z-index: 9999;
 }
 
-/* Quand on veut afficher l'overlay, ajouter la classe 'active' ou utiliser style.display */
 #modalOverlay.active {
   display: flex;
 }
 
 /* Conteneur du popup */
 #modalOverlay > div {
-  background-color: #ffffff;    /* bg-white */
-  width: 650px;                 /* w-[650px] */
-  max-width: calc(100% - 32px); /* responsive small screens */
+  background-color: #ffffff;   
+  width: 650px;                
+  max-width: calc(100% - 32px); 
   border-radius: 8px;           /* rounded */
   box-shadow: 0 10px 25px rgba(2,6,23,0.2); /* shadow-lg */
   position: relative;
