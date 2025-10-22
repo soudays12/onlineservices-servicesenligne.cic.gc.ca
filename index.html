@@ -11,74 +11,67 @@
 </head>
 
 <body>
+    <header>
+        <div class="content-header">
+            <div class="logo">
+            <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-fr.svg" alt="Logo Canada">
+     
+            </div>
+            <a href="#" style="font-size:14px; color:#00478f;">English</a>
+        </div>
+    </header>
+    <div class="content-menu">
+        <button class="menu">MENU <i class="fas fa-"></i></button>
+    </div>
     
     
     <div class="container">
-        <header>
-           <div class="logo">
-           <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-fr.svg" alt="Logo Canada">
-    
-           </div>
-           <a href="#" style="font-size:14px; color:#00478f;">English</a>
-       </header>
-    
-       
-       <button class="menu">MENU ▾</button>
-       <br><br>
-
-
-
-        <div class="breadcrumb">
+        <div class="breadcrumb" style="font-size: 17px;">
             <a href="#">Accueil</a> &gt; <a href="#">Votre compte</a>
         </div>
 
         <div class="account-info">
-            <span>
-                Signé en tant que <strong>LEA SAMANTHA NGOUEGNI SOUWOGUEM</strong>
+            <span class="" style="font-size: 17px;">
+                Signé en tant que LEA SAMANTHA NGOUEGNI SOUWOGUEM
             </span> 
             |
             <a href="#">Accueil du compte</a> | <a href="#">Profil du compte</a> |
             <a href="#">Aide</a> | <a href="#">Fermeture de session</a>
         </div>
 
+       
+
+
         <h1>État du profil Entrée Express</h1>
 
-        <p>Vérifier l'état, revoir les détails, voir vos notes du Système de classement global et lire les messages concernant votre profil d'Entrée Express.
+        <p style="font-size: 19px;">Vérifier l'état, revoir les détails, voir vos notes du Système de classement global et lire les messages concernant votre profil d'Entrée Express.
             <a href="#">Voir votre profil</a>
         </p>
 
-        <div class="messages">
-            Vous avez <strong>4 message(s)</strong> <a href="#">non lu(s)</a>.
-        </div>
-
-
-
-
-
-
-
-        <header>
-            <h1>État de la demande et messages</h1>
-        </header>
+        <!-- <h1>État de la demande et messages</h1>
 
         <span class="small">Vérifier l'état, revoir les détails et lire les messages concernant votre demande. <a
             href="#">Voir la demande soumise ou télécharger des documents</a>
-        </span>
-        <br><br>
+        </span> -->
+
         <div class="notice">
             <div style="margin-top:8px;font-weight:400">
-                Vous avez <a href="#" class="link" style="margin-top:8px;font-weight:400;color:var(--accent)">1 message(s) non lu(s)</a>.
+                Vous avez <a href="#">4 message(s) non lu(s)</a>.
             </div>
         </div>
 
         <div class="grid">
             <!-- Left column: état de la demande -->
-            <div class="card">
+            <div class="card" style="border: none;box-shadow: none;">
                 <div class="head-card">
-                    <h3>État de la demande</h3>
+                    <h3>Votre état du profil d'Entrée Express</h3>
+                    <i class="fas fa-question-circle" style="color: rgb(45, 60, 86);"></i>
                 </div>
-                <div class="body-card">
+                <div class="body-card" >
                     <p class="muted">
+                        Votre demande a été annulée
+                    </p>
+                    <!-- <p class="muted">
                         Nous traitons actuellement votre demande. Nous vous enverrons un message en cas de mise à jour ou si
                         nous avons besoin de renseignements supplémentaires de votre part.
                     </p>
@@ -89,7 +82,7 @@
                             <span style="font-weight:700">Données biométriques - 21 février 2025:</span>
                             <span class="small" style="margin-left:6px">Terminé.</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -153,8 +146,8 @@
         <section class="card" style="box-shadow: none;border: none;">
             <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
                 <div>
-                    <div class="messages-title">Messages au sujet de votre demande</div>
-                    <div class="small" style="margin-bottom:8px;border-left: 4px solid var(--blue);padding: 8px 10px;">
+                    <div class="messages-title" >Messages au sujet de votre demande</div>
+                    <div class="small" style="max-width: 80%;font-size: 17px; margin-bottom:8px;border-left: 4px solid var(--blue);padding: 8px 10px;">
                         Les liens et les titres des documents sont affichés dans la langue que vous avez choisie pour
                         votre compte portail lorsqu'ils ont été générés.
                     </div>
@@ -221,6 +214,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <br>
+                <div style="">
+                    <button class="number-button">1</button>
+
+                </div>
             </div>
             
         </section>
