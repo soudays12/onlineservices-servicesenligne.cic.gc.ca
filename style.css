@@ -21,83 +21,96 @@ body {
 }
 
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      border-bottom: 1px solid #ccc;
-    }
+header {
+    border-bottom: 2px solid #414243;
+}
+.content-header{
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content-menu{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 15px;
+}
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
-    .logo img {
-      height: 30px;
-    }
+.logo img {
+    height: 30px;
+}
 
-    .logo-text {
-      font-size: 16px;
-      line-height: 1.2;
-    }
+.logo-text {
+    font-size: 16px;
+    line-height: 1.2;
+}
 
-    .menu {
-      background-color: #4d4d4d;
-      color: white;
-      padding: 10px 20px;
-      font-weight: bold;
-    }
+.menu {
+    background-color: #4d4d4d;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 2px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-    main {
-      padding: 30px;
-      max-width: 900px;
-    }
 
-    .breadcrumb {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 10px;
-    }
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
 
-    .breadcrumb a {
-      color: #00478f;
-      text-decoration: none;
-    }
+.breadcrumb a {
+    color: #00478f;
+    text-decoration: none;
+}
 
-    .account-info {
-      font-size: 14px;
-      margin-bottom: 30px;
-      margin-left: auto;
-      width: max-content;
-    }
+.account-info {
+    font-size: 14px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    width: max-content;
+}
 
-    .account-info a {
-      color: #00478f;
-      text-decoration: none;
-    }
+.account-info a {
+    color: #00478f;
+    text-decoration: none;
+}
 
-    h1 {
-      font-size: 26px;
-      margin-bottom: 15px;
-    }
+h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
 
-    p {
-      font-size: 15px;
-      line-height: 1.5;
-    }
+p {
+    font-size: 15px;
+    line-height: 1.5;
+}
 
-    p a {
-      color: #00478f;
-      text-decoration: none;
-    }
+p a {
+    color: #00478f;
+    text-decoration: none;
+}
 
-    .messages {
-      margin-top: 20px;
-      font-size: 16px;
-    }
+.messages {
+    margin-top: 20px;
+    font-size: 16px;
+}
 /* new */
 
 
@@ -105,14 +118,17 @@ body {
 .container {
     max-width: 1100px;
     margin: 36px auto;
+    margin: none;
     padding: 20px;
 }
+
+
+
 
 header h1 {
     font-size: 28px;
     margin: 6px 0 18px 0;
     color: #222;
-    border-bottom: 3px solid #e9e3ee;
     padding-bottom: 12px;
 }
 
@@ -138,21 +154,19 @@ header h1 {
 
 .card {
     background: var(--card);
-    border: 1px solid var(--border);
     border-radius: 4px;
-    box-shadow: var(--shadow);
 }
 .head-card {
     background: var(--gray);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 4px 4px 0px 0px;
 }
 .body-card {
     background: var(--card);
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     padding: 10px;
-    border-radius: 4px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .card h3 {
@@ -190,7 +204,7 @@ header h1 {
 .messages-title {
     font-weight: 700;
     margin: 12px 0;
-    font-size: 18px
+    font-size: 25px
 }
 
 .table-wrap {
@@ -256,6 +270,18 @@ a.link {
     text-align: right
 }
 
+.number-button{
+    background-color: #0d4f7a;
+    color: #ffffff;
+    position: relative;
+    margin-left: auto;
+    padding: 7px 10px;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: large;
+    border: none;
+}
+
 /* responsive */
 @media (max-width:880px) {
     .grid {
@@ -269,7 +295,7 @@ a.link {
 }
 
 
-
+/* 
 .container-form{
 
 }
@@ -278,4 +304,4 @@ a.link {
 }
 .objet{
     
-}
+} */
