@@ -307,6 +307,104 @@ a.link {
 }
 
 
+/* partie oubliée */
+.request-status {
+    font-family: Arial, sans-serif;
+    border-radius: 5px;
+}
+
+.request-status h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.request-status p {
+    color: #555;
+}
+
+.request-status ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.request-status li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.request-status li strong {
+    color: #333;
+}
+/* partie oubliée */
+
+
+
+
+/* deux partie */
+.request-infos {
+    display: flex; /* Utiliser Flexbox pour aligner les éléments */
+    align-items: center; /* Centrer verticalement les éléments */
+    border-radius: 5px; /* Bords arrondis (optionnel) */
+    margin-top: 5px;
+}
+
+.request-infos .left {
+    display: flex; /* Utiliser Flexbox pour aligner l'icône et le texte */
+    flex-direction: column;
+}
+.request-infos .left .puce{
+    padding: 0px;
+    margin: 0px;
+    padding: 0;
+    display: flex;
+    justify-content: end;
+}
+
+
+.request-infos .left i {
+    font-size: 18px; /* Taille de l'icône */
+    color: #3c3e43; /* Couleur de l'icône (vous pouvez remplacer par une couleur spécifique) */
+}
+.request-infos h4 {
+    margin: 0;
+    padding: 0;
+}
+.request-infos * {
+    margin: 0;
+    padding: 0;
+}
+
+
+.request-infos .right {
+    flex-grow: 1; /* Permet à la colonne droite de prendre tout l'espace disponible */
+    margin-left: 5px;
+}
+
+.request-infos .head {
+    display: flex; /* Utiliser Flexbox pour aligner le titre et l'icône de question */
+    align-items: center; /* Centrer verticalement */
+}
+
+.request-infos .title-head {
+    margin: 0; /* Supprimer les marges par défaut du h1 */
+    font-size: 18px; /* Taille du titre */
+    font-weight: bold; /* Gras */
+}
+
+.request-infos .head i {
+    margin-left: 10px; /* Espace entre le titre et l'icône de question */
+    font-size: 18px; /* Taille de l'icône de question */
+    color: #364c88; /* Couleur de l'icône (vous pouvez remplacer par une couleur spécifique) */
+}
+
+.request-infos .object {
+    margin: 5px 0 0; /* Espacement pour le texte "Sans objet" */
+    font-size: 14px; /* Taille du texte */
+    color: #666; /* Couleur du texte (optionnel) */
+}
+/* deux partie */
+
 
 
 
