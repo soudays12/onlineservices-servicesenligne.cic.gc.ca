@@ -5,35 +5,76 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMO7E8v3K8j6R3zW7v9zH7Z3/8fC1v4B4Tt4Q5" crossorigin="anonymous">
-    <title>Demandes</title>
+    <link rel="stylesheet" href="fontawesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>onlineservices-servicesenligne</title>
 </head>
 
 <body>
+
+    <header>
+        <div class="content-header">
+            <div class="logo">
+                <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-fr.svg" alt="Logo Canada">
+
+            </div>
+            <a href="#" style="font-size:14px; color:#00478f;">English</a>
+        </div>
+    </header>
+    <div class="content-menu">
+        <button class="menu">MENU <i class="fas fa-chevron-down"></i></button>
+    </div>
+
+
     <div class="container">
-        <header>
-            <h1>État de la demande et messages</h1>
-        </header>
+        <div class="breadcrumb" style="font-size: 17px;">
+            <a href="#">Accueil</a> &gt; <a href="#">Votre compte</a>
+        </div>
+
+        <div class="account-info">
+            <span class="" style="font-size: 17px;">
+                Signé en tant que LEA SAMANTHA NGOUEGNI SOUWOGUEM
+            </span>
+            |
+            <a href="#">Accueil du compte</a> | <a href="#">Profil du compte</a> |
+            <a href="#">Aide</a> | <a href="#">Fermeture de session</a>
+        </div>
+
+
+
+
+        <h1>État du profil Entrée Express</h1>
+
+        <p style="font-size: 19px;">Vérifier l'état, revoir les détails, voir vos notes du Système de classement global
+            et lire les messages conçernant votre profil d'Entrée Express.
+            <a href="#">Voir votre profil</a>
+        </p>
+
+        <!-- <h1>État de la demande et messages</h1>
 
         <span class="small">Vérifier l'état, revoir les détails et lire les messages concernant votre demande. <a
             href="#">Voir la demande soumise ou télécharger des documents</a>
-        </span>
-        <br><br>
+        </span> -->
+
         <div class="notice">
             <div style="margin-top:8px;font-weight:400">
-                Vous avez <a href="#" class="link" style="margin-top:8px;font-weight:400;color:var(--accent)">1 message(s) non lu(s)</a>.
+                Vous avez <a href="#">4 message(s) non lu(s)</a>.
             </div>
         </div>
 
         <div class="grid">
             <!-- Left column: état de la demande -->
-            <div class="card">
+            <div class="card" style="border: none;box-shadow: none;">
                 <div class="head-card">
-                    <h3>État de la demande</h3>
+                    <h3>Votre état du profil d'Entrée Express</h3>
+                    <i class="fas fa-question-circle" style="color: rgb(45, 60, 86);"></i>
                 </div>
                 <div class="body-card">
                     <p class="muted">
+                        Nous traitons actuellement votre demande. Nous vous enverrons un message en cas de mise à jour
+                        si nous avons besoin de renseignements de votre part.
+                    </p>
+                    <!-- <p class="muted">
                         Nous traitons actuellement votre demande. Nous vous enverrons un message en cas de mise à jour ou si
                         nous avons besoin de renseignements supplémentaires de votre part.
                     </p>
@@ -44,7 +85,7 @@
                             <span style="font-weight:700">Données biométriques - 21 février 2025:</span>
                             <span class="small" style="margin-left:6px">Terminé.</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -57,35 +98,219 @@
                 <div class="body-card">
                     <dl class="info-list">
                         <dt>Demandeur principal :</dt>
-                        <dd>ERMINE JEOKENG KENNE</dd>
-    
+                        <dd>LEA SAMANTHA NGOUEGNI SOUWOGUEM</dd>
+
                         <dt>Identificateur unique de client (IUC) :</dt>
-                        <dd>1139699103</dd>
-    
+                        <dd>1139626387</dd>
+
                         <dt>Numéro de la demande :</dt>
-                        <dd>E003307010</dd>
-    
+                        <dd>E003297208</dd>
+
                         <dt>Date de réception :</dt>
                         <dd>14 octobre 2024</dd>
-    
+
                         <dt>Données biométriques :</dt>
-                            <div class="medical-data">
-                                <dd>Numéro des données biométriques : 00104420250 / 221104726</dd>
-                                <dd>Date de l'entrée des données biométriques : 21 février 2025</dd>
-                                <dd>Date d'expiration : 21 février 2035</dd>
-                            </div>
+                        <div class="medical-data" style="padding-left: 20px;">
+                            <dd>Numéro des données biométriques :</dd>
+                            <dd>Date de l'entrée des données biométriques : </dd>
+                            <dd>Date d'expiration : </dd>
+                        </div>
                     </dl>
                     <div style="margin-top:10px">
-                        <a href="#" class="link">Voir les personnes à charge</a>
+                        <a href="#" id="openModal" class="link">Voir les personnes à charge</a>
                     </div>
+
+
+                    <!-- popup modal données -->
+                    <!-- Overlay -->
+                    <div id="modalOverlay"
+                        class="fixed inset-0 bg-black bg-opacity-40 hidden flex items-center justify-center">
+                        <!-- Popup -->
+                        <div class="bg-white w-[650px] rounded shadow-lg relative">
+                            <!-- En-tête -->
+                            <div
+                                style="display: flex;justify-content: space-between;padding: 15px;background-color: #4e95dc;">
+                                <h2 style="padding: 0;margin: 0;color: #ffffff;">Dépendants</h2>
+                                <button id="closeModal" style="color: #ffffff;font-size:30px;">&times;</button>
+                            </div>
+
+                            <!-- Contenu -->
+                            <div class="p-4 overflow-x-auto" style="we">
+                                <table class="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr>
+                                            <th>Type de demandeur</th>
+                                            <th>Prénom et nom</th>
+                                            <th>Identificateur unique de client (IUC)</th>
+                                            <th>Numéro des données biométriques</th>
+                                            <th>Date de l'entrée des données biométriques</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Dépendants</td>
+                                            <td>HERVE CONSTANTIN FOTIE</td>
+                                            <td>1139626389</td>
+                                            <td>—</td>
+                                            <td>—</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- popup -->
 
                 </div>
 
             </div>
         </div>
 
+
+        <!-- partie oubliée -->
+        <div class="request-status">
+            <h2>Détails au sujet de l'état de votre demande</h2>
+            <p>Lorsque nous recevons votre demande, elle peut suivre diverses étapes avant que nous prenions une
+                décision. Utilisez le tableau suivant pour vous informer de l'état actuel de chaque étape de la demande.
+            </p>
+
+            
+            <!-- sous cette forme -->
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+                        <i class="fas fa-file-lines"></i>
+                    </p>
+                    <p>
+                        <div class="puce">o</div>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Examen d'admissibilité</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Sans objet</p>
+                </div>
+            </div>
+
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+                        <i class="fas fa-file-medical"></i>
+                    </p>
+                    <p>
+                        <div class="puce">o</div>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Examen des résultats médicaux</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Sans objet</p>
+                </div>
+            </div>
+
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+                        <i class="fas fa-folder-open"></i>
+                    </p>
+                    <p>
+                        <div class="puce">o</div>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Examen des documents supplémentaires</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Sans objet</p>
+                </div>
+            </div>
+
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+
+                        <i class="fas fa-user-group"></i>
+                    </p>
+                    <p>
+                        <div class="puce">o</div>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Entrevue</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Sans objet</p>
+                </div>
+            </div>
+
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+                        <i class="fas fa-building"></i>
+                    </p>
+                    <p>
+                        <div class="puce">o</div>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Données biométriques</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Sans objet</p>
+                </div>
+            </div>
+
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+
+                        <i class="fas fa-user-check"></i>
+                    </p>
+                    <p>
+
+                        <div class="puce">o</div>
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Vérification d'antécédents</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Sans objet</p>
+                </div>
+            </div>
+
+            <div class="request-infos">
+                <div class="left">
+                    <p>
+                        <i class="fas fa-balance-scale"></i>
+                    </p>
+                    <p>
+                        <div class="puce">o</div>
+
+                    </p>
+                </div>
+                <div class="right">
+                    <div class="head">
+                        <h1 class="title-head"> Décision finale</h1>
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <p class="object">Nous traitons actuellement votre demande. Nous vous enverrons un message en cas de mise à jour si nous avons besoin de renseignements de votre part.</p>
+                </div>
+            </div>
+
+        </div>
+
+
         <!-- Decision section -->
-        <div class="container-decision">
+        <!-- <div class="container-decision">
             <div class="head-decision">
                 <i class="fas fa-balance-scale"></i>
                 <span class="text-decision">
@@ -96,22 +321,27 @@
             <br>
             <div class="container-content" style="display: flex;flex-direction: row;">
                 <div>
-                    
+
                 </div>
                 <i class="fas fa-dot-circle" style="margin-top: auto;margin-bottom: auto;"></i>
-                <p class="content-decision" style="margin-left: 10px;width: 70%;">Les liens et les titres des documents sont affichés dans la langue que vous avez choisi pour votre compte portail lorsqu'ils ont étés générés.</p>
+                <p class="content-decision" style="margin-left: 10px;width: 70%;">Les liens et les titres des documents
+                    sont affichés dans la langue que vous avez choisi pour votre compte portail lorsqu'ils ont étés
+                    générés.</p>
             </div>
-        </div>
+        </div> -->
 
 
+        <br><br>
         <!-- Messages section -->
         <section class="card" style="box-shadow: none;border: none;">
             <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
                 <div>
                     <div class="messages-title">Messages au sujet de votre demande</div>
-                    <div class="small" style="margin-bottom:8px;border-left: 4px solid var(--blue);padding: 8px 10px;">
-                        Les liens et les titres des documents sont affichés dans la langue que vous avez choisie pour
-                        votre compte portail lorsqu'ils ont été générés.
+                    <div class="small" style="max-width: 80%; font-size: 17px; margin-left: 10px;margin-bottom: 8px; border-left: 4px solid var(--blue); padding: 8px 10px;padding-left: 20px; position: relative;">
+                        <!-- <div class="parent" style="position: relative; width: 100px; height: 100px; background-color: lightgrey;">
+                        </div> -->
+                        <i class="fas fa-info-circle" style="color: var(--blue); font-size: 25px;z-index: 10; position: absolute;border-radius: 50%; outline: 5px solid white; left: -20px; z-index: 5; top: 50%; transform: translateY(-50%);"></i>
+                        Les liens et les titres des documents sont affichés dans la langue que vous avez choisie pour votre compte portail lorsqu'ils ont été générés.
                     </div>
                 </div>
             </div>
@@ -120,64 +350,80 @@
             </p>
             <div class="search-row" style="margin-top:6px">
                 <label for="search" class="small">Rechercher :</label>
-                <input id="search" type="text"/>
+                <input id="search" type="text" />
                 <div class="small" style="margin-left:auto">
-                    <span>Affichage de l'élément de 1 à 5 éléments</span> 
+                    <span>Affichage de l'élément de 1 à 6 sur 6 éléments</span>
                     <b>|
-                    Afficher 
+                        Afficher
                     </b>
                     <select>
                         <option>10</option>
                         <option>25</option>
-                    </select> 
+                    </select>
                     éléments
                 </div>
             </div>
 
-            
+
             <div class="table-wrap" style="margin-top:10px">
                 <table aria-describedby="messages-desc">
                     <thead>
                         <tr>
-                            <th>Objet</th>
-                            <th style="width:160px">Date d'envoi</th>
-                            <th style="width:160px">Date de lecture</th>
+                            <th>
+                                Objet ⇅
+                            </th>
+                            <th style="width:160px">
+                                Date d'envoi
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </th>
+                            <th style="width:160px">
+                                Date de lecture ⇅
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="#" class="link">Équité procédurale</a></td>
-                            <td>21 février 2025</td>
+                            <td><a href="#" class="link">Autre</a></td>
+                            <td>30 avril 2025</td>
+                            <td>30 avril 2025</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="link">Autre</a></td>
+                            <td>15 janvier 2025</td>
+                            <td>15 janvier 2025</td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" class="link">Comment trouver un emploi au Canada</a></td>
+                            <td>16 juillet 2024</td>
                             <td>Nouveau Message</td>
                         </tr>
 
                         <tr>
-                            <td><a href="#" class="link">Lettre de demande biométrique</a></td>
-                            <td>14 février 2025</td>
-                            <td>15 février 2025</td>
+                            <td><a href="#" class="link">Bienvenue à l'Entrée express</a></td>
+                            <td>16 juillet 2024</td>
+                            <td>Nouveau Message</td>
                         </tr>
 
                         <tr>
-                            <td><a href="#" class="link">Lettre de demande biométrique</a></td>
-                            <td>14 février 2025</td>
-                            <td>15 février 2025</td>
+                            <td><a href="#" class="link">Vivre en français au Canada</a></td>
+                            <td>16 juillet 2024</td>
+                            <td>Nouveau Message</td>
                         </tr>
-
                         <tr>
-                            <td><a href="#" class="link">Accusé de réception - Demande de résidence permanente</a></td>
-                            <td>14 octobre 2024</td>
-                            <td>14 octobre 2024</td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="#" class="link">Confirmation de transmission de la demande en ligne</a></td>
-                            <td>14 octobre 2024</td>
-                            <td>14 octobre 2024</td>
+                            <td><a href="#" class="link">Invitation à présenter une demande</a></td>
+                            <td>15 juillet 2024</td>
+                            <td>16 août 2024</td>
                         </tr>
                     </tbody>
                 </table>
+                <br>
+                <div style="display: flex; justify-content: center;">
+                    <a class="number-button">1</a>
+                </div>
+                <br>
+                <button class="feedback-button">Signaler une erreur ou un problème sur cette page</button>
             </div>
-            
+
         </section>
 
         <br><br>
@@ -193,6 +439,7 @@
 
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
